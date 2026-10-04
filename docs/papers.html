@@ -3,29 +3,179 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Papers - Mingsong Yan</title>
+  <title>Publications - Mingsong Yan</title>
+  <meta name="description" content="Publications by Mingsong Yan, organized by year.">
   <link rel="stylesheet" href="site.css">
+  <style>
+    /* Year-by-year papers page. Replace docs/papers.html only.
+       The shared site.css and the sidebar are left unchanged. */
+    #layout-content {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    #toptitle {
+      padding: 0 0 0.2em;
+      margin: 0 0 1em;
+      border-bottom: 1px solid #aaaaaa;
+    }
+    #toptitle h1 {
+      margin: 0.3em 0 0;
+      padding: 0 0 0.1em;
+      font-size: 1.65em;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #4169e1;
+    }
+    .papers-intro { margin: 0 0 1.1em; font-size: 0.95em; line-height: 1.3; }
+    .authorship-note { margin-left: 1.3em; }
+    .paper-section { margin: 0 0 1.5em; }
+    .paper-section h2 {
+      margin: 0 0 0.4em;
+      padding: 0.6em 0 0.2em;
+      border-bottom: 1px solid #aaaaaa;
+      font-size: 1.25em;
+      font-weight: 700;
+      line-height: 1;
+      color: #4169e1;
+    }
+    .paper-section:first-of-type h2 { padding-top: 0; }
+    .paper-list {
+      margin: 0;
+      padding: 0 0 0 2.2em;
+      list-style: decimal outside;
+    }
+    .paper-list > li {
+      margin: 0 0 0.5em;
+      padding: 0;
+      line-height: 1.3;
+      break-inside: avoid;
+    }
+    .paper-list > li:last-child { margin-bottom: 0; }
+    .paper-title,
+    .paper-title:visited {
+      display: block;
+      margin: 0;
+      color: #224b8d;
+      font-weight: 700;
+      line-height: 1.3;
+      text-decoration: none;
+    }
+    .paper-title:hover,
+    .paper-title:focus-visible {
+      text-decoration: underline;
+      text-decoration-style: solid;
+      text-decoration-color: currentColor;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .paper-details { margin: 0; padding: 0; line-height: 1.3; }
+    .self-author {
+      color: #000000;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .paper-resources { margin-left: 0.2em; }
+    .paper-resources a { white-space: nowrap; }
+    .math-term { white-space: nowrap; }
+    .math-term sub { font-size: 0.75em; line-height: 0; }
+    .authorship-mark { font-size: 0.75em; line-height: 0; vertical-align: super; }
+    #footer { margin-top: 3em; }
+    @media (max-width: 640px) {
+      .authorship-note { display: block; margin: 0.35em 0 0; }
+      .paper-list { padding-left: 1.5em; }
+      .paper-list > li { margin-bottom: 0.85em; }
+      .paper-section { margin-bottom: 1.5em; }
+    }
+    @media print {
+      .paper-section h2 { break-after: avoid; }
+      .paper-list > li { break-inside: avoid; }
+    }
+  </style>
 </head>
 <body>
 <a class="skip-link" href="#layout-content">Skip to content</a>
 <div class="site-layout">
-  <nav id="layout-menu" aria-label="Main navigation">
-    <div class="menu-list">
-      <div class="menu-item"><a href="index.html">Home</a></div>
-      <div class="menu-item"><a href="research.html">Research</a></div>
-      <div class="menu-item"><a href="papers.html" class="current" aria-current="page">Papers</a></div>
-      <div class="menu-item"><a href="talks.html">Talks</a></div>
-      <div class="menu-item"><a href="teaching.html">Teaching</a></div>
-      <div class="menu-item"><a href="cv.html">CV</a></div>
-    </div>
-  </nav>
+  <nav aria-label="Main navigation" id="layout-menu">
+<div class="menu-list">
+<div class="menu-item"><a href="index.html">Home</a></div>
+<div class="menu-item"><a href="research.html">Research</a></div>
+<div class="menu-item"><a aria-current="page" class="current" href="papers.html">Publications</a></div>
+<div class="menu-item"><a href="talks.html">Talks</a></div>
+<div class="menu-item"><a href="teaching.html">Teaching</a></div>
+<div class="menu-item"><a href="cv.html">CV</a></div>
+</div>
+</nav>
   <main id="layout-content" tabindex="-1">
-    <div id="toptitle"><h1>Papers</h1></div>
-    <!-- EDIT YOUR PAGE CONTENT BELOW -->
-<h2>Publications and preprints</h2>
-<p class="placeholder">Add your publications here, with paper titles, authors, venues, years, and links.</p>
-<p class="placeholder">No sample publications have been added, so the starter does not attribute any fictitious papers to you.</p>
-    <!-- END PAGE CONTENT -->
+    <div id="toptitle"><h1>Publications</h1></div>
+    <p class="papers-intro">
+<a href="https://scholar.google.com/citations?user=5XZGt0gAAAAJ&amp;hl=en">Google Scholar</a>
+<span class="authorship-note">⋄: Alphabetical authorship.</span>
+</p>
+    <!-- Bibliographic source: the author's supplied 2026_Job_Application.pdf.
+         Titles, author order, years, and publication status follow that CV.
+         Year headings replace the former publication-type headings.
+         Each ol restarts numbering at 1, as in the reference design.
+         The accepted SIAM paper uses the 2025 arXiv year recorded in the CV;
+         no journal publication year is asserted for that paper.
+         The bracketed links retain the previous page's research resources.
+         To add a paper, copy a li into its year section and edit its content. -->
+    <section class="paper-section" aria-labelledby="year-2026">
+      <h2 id="year-2026">2026</h2>
+      <ol class="paper-list">
+          <li id="sparse-random-graphs">
+            <a class="paper-title" href="https://arxiv.org/pdf/2606.26662">Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence</a>
+            <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Zhida Wang, Sui Tang. <em>arXiv preprint</em>, <a href="https://arxiv.org/abs/2606.26662">arXiv:2606.26662</a>, 2026.<span class="paper-resources"><a href="https://arxiv.org/pdf/2606.26662" aria-label="Paper: Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence">[paper]</a></span></p>
+          </li>
+          <li id="transformers-kernel-regression">
+            <a class="paper-title" href="https://arxiv.org/pdf/2605.08475">Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression</a>
+            <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Dongyang Li, Charles Kulick, Sui Tang. <em>arXiv preprint</em>, <a href="https://arxiv.org/abs/2605.08475">arXiv:2605.08475</a>, 2026.<span class="paper-resources"><a href="https://arxiv.org/pdf/2605.08475" aria-label="Paper: Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression">[paper]</a></span></p>
+          </li>
+          <li id="hypothesis-spaces">
+            <a class="paper-title" href="https://arxiv.org/pdf/2403.03353">Hypothesis Spaces for Deep Learning</a>
+            <p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship">⋄</sup>. <em>Neural Networks</em>, 193, 2026.<span class="paper-resources"><a href="https://arxiv.org/pdf/2403.03353" aria-label="Paper: Hypothesis Spaces for Deep Learning">[paper]</a> <a href="https://www.sciencedirect.com/science/article/pii/S0893608025008767" aria-label="Journal: Hypothesis Spaces for Deep Learning">[journal]</a></span></p>
+          </li>
+      </ol>
+    </section>
+    <section class="paper-section" aria-labelledby="year-2025">
+      <h2 id="year-2025">2025</h2>
+      <ol class="paper-list">
+          <li id="continuous-depth-gnn">
+            <a class="paper-title" href="https://arxiv.org/pdf/2510.03923">On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks</a>
+            <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Charles Kulick, Sui Tang. Accepted for publication in <em>SIAM Journal on Mathematics of Data Science</em>. <a href="https://arxiv.org/abs/2510.03923">arXiv:2510.03923</a>, 2025.<span class="paper-resources"><a href="https://arxiv.org/pdf/2510.03923" aria-label="Paper: On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks">[paper]</a></span></p>
+          </li>
+          <li id="cola">
+            <a class="paper-title" href="https://aclanthology.org/2025.emnlp-main.230.pdf">CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation</a>
+            <p class="paper-details">Ziyue Liu, Ruijie Zhang, Zhengyang Wang, <span class="self-author">Mingsong Yan</span>, Zi Yang, Paul Hovland, Bogdan Nicolae, Franck Cappello, Sui Tang, Zheng Zhang. In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025.<span class="paper-resources"><a href="https://aclanthology.org/2025.emnlp-main.230.pdf" aria-label="Paper: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation">[paper]</a> <a href="https://aclanthology.org/2025.emnlp-main.230/" aria-label="Proceedings: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation">[proceedings]</a></span></p>
+          </li>
+      </ol>
+    </section>
+    <section class="paper-section" aria-labelledby="year-2024">
+      <h2 id="year-2024">2024</h2>
+      <ol class="paper-list">
+          <li id="sparse-deep-learning">
+            <a class="paper-title" href="https://arxiv.org/pdf/2408.02801">Sparse Deep Learning Models with the <span class="math-term">ℓ<sub>1</sub></span> Regularization</a>
+            <p class="paper-details">Lixin Shen, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship">⋄</sup>. <em>arXiv preprint</em>, <a href="https://arxiv.org/abs/2408.02801">arXiv:2408.02801</a>, 2024.<span class="paper-resources"><a href="https://arxiv.org/pdf/2408.02801" aria-label="Paper: Sparse Deep Learning Models with the ℓ 1 Regularization">[paper]</a></span></p>
+          </li>
+          <li id="inexact-fixed-point">
+            <a class="paper-title" href="https://link.springer.com/content/pdf/10.1007/s10915-024-02600-7.pdf">Inexact Fixed-Point Proximity Algorithm for the <span class="math-term">ℓ<sub>0</sub></span> Sparse Regularization Problem</a>
+            <p class="paper-details">Ronglong Fang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship">⋄</sup>. <em>Journal of Scientific Computing</em>, 100(2):58, 2024.<span class="paper-resources"><a href="https://link.springer.com/content/pdf/10.1007/s10915-024-02600-7.pdf" aria-label="Paper: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem">[paper]</a> <a href="https://link.springer.com/article/10.1007/s10915-024-02600-7" aria-label="Journal: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem">[journal]</a></span></p>
+          </li>
+          <li id="sparse-representer-theorems">
+            <a class="paper-title" href="https://jmlr.org/papers/volume25/23-0645/23-0645.pdf">Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces</a>
+            <p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship">⋄</sup>. <em>Journal of Machine Learning Research</em>, 25(93):1–45, 2024.<span class="paper-resources"><a href="https://jmlr.org/papers/volume25/23-0645/23-0645.pdf" aria-label="Paper: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces">[paper]</a> <a href="https://jmlr.org/papers/v25/23-0645.html" aria-label="Journal: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces">[journal]</a></span></p>
+          </li>
+      </ol>
+    </section>
+    <section class="paper-section" aria-labelledby="year-2023">
+      <h2 id="year-2023">2023</h2>
+      <ol class="paper-list">
+          <li id="parameter-choices">
+            <a class="paper-title" href="https://arxiv.org/pdf/2205.07170">Parameter Choices for Sparse Regularization with the <span class="math-term">ℓ<sub>1</sub></span> Norm</a>
+            <p class="paper-details">Qianru Liu, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship">⋄</sup>. <em>Inverse Problems</em>, 39(2):025004, 2023.<span class="paper-resources"><a href="https://arxiv.org/pdf/2205.07170" aria-label="Paper: Parameter Choices for Sparse Regularization with the ℓ 1 Norm">[paper]</a> <a href="https://doi.org/10.1088/1361-6420/acad22" aria-label="Journal: Parameter Choices for Sparse Regularization with the ℓ 1 Norm">[journal]</a></span></p>
+          </li>
+      </ol>
+    </section>
     <footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
   </main>
 </div>
