@@ -79,7 +79,25 @@
     .paper-resources a { white-space: nowrap; }
     .math-term { white-space: nowrap; }
     .math-term sub { font-size: 0.75em; line-height: 0; }
-    .authorship-mark { font-family: Georgia, "Times New Roman", serif; font-size: 0.8em; font-weight: 400; color: #000000; line-height: 0; vertical-align: super; }
+    /* A full-size, bold marker, raised slightly without increasing line spacing. */
+    .authorship-mark {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.1em;
+      font-weight: 700;
+      color: #000000;
+      line-height: 0;
+      vertical-align: baseline;
+      position: relative;
+      top: -0.18em;
+      margin-left: 0.15em;
+    }
+    .authorship-key {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2em;
+      font-weight: 700;
+      color: #000000;
+      margin-right: 0.15em;
+    }
     #footer { margin-top: 3em; }
     @media (max-width: 640px) {
       .authorship-note { display: block; margin: 0.35em 0 0; }
@@ -110,7 +128,7 @@
     <div id="toptitle"><h1>Publications</h1></div>
     <p class="papers-intro">
 <a href="https://scholar.google.com/citations?user=5XZGt0gAAAAJ&amp;hl=en">Google Scholar</a>
-<span class="authorship-note">&dagger; Authors listed in alphabetical order.</span>
+<span class="authorship-note"><strong class="authorship-key">&dagger;</strong> Alphabetical authorship.</span>
 </p>
     <!-- Bibliographic source: the author's supplied 2026_Job_Application.pdf.
          Titles, author order, years, and publication status follow that CV.
