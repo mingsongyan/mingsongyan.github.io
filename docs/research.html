@@ -4,7 +4,81 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research - Mingsong Yan</title>
+  <meta name="description" content="Mingsong Yan studies the mathematical foundations of efficient and interpretable machine learning, using functional analysis, optimization, and dynamical systems.">
   <link rel="stylesheet" href="site.css">
+  <style>
+    /* Concise Research page: replace docs/research.html only.
+       The sidebar and shared site.css are unchanged. */
+    #layout-content {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    #toptitle {
+      padding: 0 0 0.2em;
+      margin: 0 0 1em;
+      border-bottom: 1px solid #aaaaaa;
+    }
+    #toptitle h1 {
+      margin: 0.3em 0 0;
+      padding: 0 0 0.1em;
+      font-size: 1.65em;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #4169e1;
+    }
+    .research-overview {
+      margin: 0 0 1.35em;
+      line-height: 1.4;
+    }
+    .research-themes {
+      margin: 0 0 1.35em;
+      padding: 0.65em 0.85em 0.75em;
+      border: 1px solid #c5c5c5;
+      background-color: #f6f6f6;
+      color: #000000;
+    }
+    .research-themes > p {
+      margin: 0 0 0.55em;
+      line-height: 1.4;
+    }
+    .theme-list {
+      margin: 0;
+      padding-left: 1.7em;
+      list-style: square outside;
+    }
+    .theme-list > li {
+      margin: 0 0 0.7em;
+      line-height: 1.4;
+    }
+    .theme-list > li:last-child { margin-bottom: 0; }
+    .theme-label { font-weight: 700; color: #000000; }
+    /* Compact links to representative entries on the Publications page. */
+    .theme-papers {
+      margin: 0.3em 0 0;
+      padding: 0;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .theme-papers-label { color: #444444; }
+    .theme-papers a {
+      display: inline-block;
+      margin-left: 0.3em;
+      color: #224b8d;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+    .publications-link { margin: 0; line-height: 1.4; }
+    #footer { margin-top: 3em; }
+    @media (max-width: 640px) {
+      .research-themes { padding: 0.75em; }
+      .theme-list { padding-left: 1.25em; }
+      .theme-list > li { margin-bottom: 0.85em; }
+    }
+    @media print {
+      .research-themes { break-inside: avoid; }
+    }
+  </style>
 </head>
 <body>
 <a class="skip-link" href="#layout-content">Skip to content</a>
@@ -13,21 +87,43 @@
     <div class="menu-list">
       <div class="menu-item"><a href="index.html">Home</a></div>
       <div class="menu-item"><a href="research.html" class="current" aria-current="page">Research</a></div>
-      <div class="menu-item"><a href="papers.html">Papers</a></div>
-      <div class="menu-item"><a href="talks.html">Talks</a></div>
+      <div class="menu-item"><a href="papers.html">Publications</a></div>
+      <div class="menu-item"><a href="talks.html">Presentations</a></div>
       <div class="menu-item"><a href="teaching.html">Teaching</a></div>
       <div class="menu-item"><a href="cv.html">CV</a></div>
     </div>
   </nav>
   <main id="layout-content" tabindex="-1">
     <div id="toptitle"><h1>Research</h1></div>
-    <!-- EDIT YOUR PAGE CONTENT BELOW -->
-<h2>Overview</h2>
-<p class="placeholder">Add a short overview of your research here.</p>
-<h2>Research directions</h2>
-<p class="placeholder">Describe your main projects and the mathematical questions that connect them.</p>
-<p>See the <a href="papers.html">Papers</a> page for publications.</p>
-    <!-- END PAGE CONTENT -->
+    
+    <!-- Research framing follows Research Interests in the author's supplied
+         2026_Job_Application.pdf. This page summarizes efficiency and
+         interpretability without adding claims about results or future projects.
+         Selected-paper links use existing IDs in papers.html.
+          Edit the prose here; leave the filename research.html unchanged. -->
+    <p class="research-overview">My research focuses on the mathematical foundations of <strong>efficient and interpretable machine learning</strong>. Using tools from functional analysis, optimization, and dynamical systems, I study how mathematical structure can help us understand and improve modern learning models, particularly neural networks and large language models.</p>
+
+    <section class="research-themes" aria-labelledby="themes-intro">
+      <p id="themes-intro">My work centers on two closely connected themes:</p>
+      <ul class="theme-list">
+        <li><strong class="theme-label">Efficiency:</strong> Exploiting sparsity and low-rank structure, understanding optimization mechanisms, and studying the transferability of graph neural models across graph sizes.
+          <p class="theme-papers"><span class="theme-papers-label">Selected papers:</span>
+            <a href="papers.html#sparse-deep-learning" title="Sparse Deep Learning Models with the ℓ 1 Regularization" aria-label="Publication details: Sparse Deep Learning Models with the ℓ 1 Regularization">[Sparse learning]</a>
+            <a href="papers.html#cola" title="CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" aria-label="Publication details: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation">[Low-rank pretraining]</a>
+            <a href="papers.html#sparse-random-graphs" title="Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence" aria-label="Publication details: Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence">[Sparse graph transfer]</a>
+          </p>
+        </li>
+        <li><strong class="theme-label">Interpretability:</strong> Developing function-space perspectives on deep learning and understanding how transformers implement classical learning algorithms through in-context learning.
+          <p class="theme-papers"><span class="theme-papers-label">Selected papers:</span>
+            <a href="papers.html#transformers-kernel-regression" title="Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression" aria-label="Publication details: Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression">[Transformers and ICL]</a>
+            <a href="papers.html#hypothesis-spaces" title="Hypothesis Spaces for Deep Learning" aria-label="Publication details: Hypothesis Spaces for Deep Learning">[Hypothesis spaces]</a>
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <p class="publications-link">See <a href="papers.html">Publications</a> for the complete list of papers.</p>
+
     <footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
   </main>
 </div>
