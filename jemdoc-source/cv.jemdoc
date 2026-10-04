@@ -1,0 +1,10 @@
+# jemdoc: menu{MENU}{cv.html}, notime
+= CV
+
+== Curriculum vitae
+Upload your current CV and add its download link here.
+
+Suggested file location: +docs/files/CV.pdf+ in your repository. Then add a link to +files/CV.pdf+ on this page.
+
+# After uploading your CV, uncomment the following:
+# [files/CV.pdf Download my CV (PDF)]

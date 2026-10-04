@@ -1,0 +1,13 @@
+# jemdoc: menu{MENU}{index.html}, notime
+= Mingsong Yan
+
+#includeraw{profile.html}
+
+== About
+Add a short biography here: your current position, research background, and academic interests.
+
+== Research interests
+Introduce your main research questions and directions here. The Research and Papers pages provide room for more detail.
+
+== Contact
+Please contact me at [mailto:mingsongyan@ucsb.edu mingsongyan@ucsb.edu].
