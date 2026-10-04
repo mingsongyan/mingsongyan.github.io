@@ -4,7 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Teaching - Mingsong Yan</title>
+  <meta name="description" content="Courses taught by Mingsong Yan at the University of California, Santa Barbara and Old Dominion University.">
   <link rel="stylesheet" href="site.css">
+  <style>
+    /* Classic teaching list. These rules apply to this page only. */
+    #layout-content {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.3;
+    }
+    #toptitle {
+      padding: 0 0 0.2em;
+      margin: 0 0 1.3em;
+      border-bottom: 1px solid #aaaaaa;
+    }
+    #toptitle h1 {
+      margin: 0.3em 0 0;
+      padding: 0 0 0.1em;
+      font-size: 1.65em;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #4169e1;
+    }
+    .teaching-section h2 {
+      margin: 0.7em 0 0.3em;
+      padding: 0.8em 0 0.2em 1.2em;
+      border-bottom: 1px solid #aaaaaa;
+      font-size: 1.25em;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #4169e1;
+    }
+    .teaching-section:first-of-type h2 {
+      margin-top: 0;
+      padding-top: 0;
+    }
+    .course-list {
+      margin: 0.2em 0 0.8em;
+      padding: 0 0 0 2.5em;
+      list-style: square outside;
+    }
+    .course-list li {
+      margin: 0 0 0.3em;
+      padding: 0;
+      line-height: 1.3;
+    }
+    .course-term, .course-number { white-space: nowrap; }
+    .teaching-award {
+      margin: 0.9em 0 0.8em 1.5em;
+      font-size: 0.95em;
+      line-height: 1.3;
+    }
+    @media (max-width: 640px) {
+      .teaching-section h2 { padding-left: 0; }
+      .course-list { padding-left: 1.5em; }
+      .course-list li { margin-bottom: 0.45em; }
+      .teaching-award { margin-left: 0; }
+    }
+  </style>
 </head>
 <body>
 <a class="skip-link" href="#layout-content">Skip to content</a>
@@ -21,12 +78,40 @@
   </nav>
   <main id="layout-content" tabindex="-1">
     <div id="toptitle"><h1>Teaching</h1></div>
-    <!-- EDIT YOUR PAGE CONTENT BELOW -->
-<h2>Courses</h2>
-<p class="placeholder">List your courses here, with institutions, terms, and optional links to public course materials.</p>
-    <!-- END PAGE CONTENT -->
-    <footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
-  </main>
-</div>
+    <!-- Courses taught as instructor. Add new offerings at the top of each list. -->
+      <section class="teaching-section" aria-labelledby="ucsb-heading">
+        <h2 id="ucsb-heading">University of California, Santa Barbara</h2>
+        <ul class="course-list">
+          <li><span class="course-term">Fall 2026:</span> Ordinary Differential Equations <span class="course-number">(Math 119A)</span></li>
+          <li><span class="course-term">Fall 2026:</span> Transition to Higher Mathematics <span class="course-number">(Math 8)</span></li>
+          <li><span class="course-term">Spring 2026:</span> Transition to Higher Mathematics <span class="course-number">(Math 8)</span></li>
+          <li><span class="course-term">Winter 2026:</span> Numerical Analysis <span class="course-number">(Math 104B)</span></li>
+          <li><span class="course-term">Fall 2025:</span> Introduction to Numerical Analysis <span class="course-number">(Math 104A)</span></li>
+          <li><span class="course-term">Fall 2025:</span> Calculus II <span class="course-number">(Math 3B)</span></li>
+          <li><span class="course-term">Spring 2025:</span> Differential Equations <span class="course-number">(Math 4B)</span></li>
+          <li><span class="course-term">Winter 2025:</span> Transition to Higher Mathematics <span class="course-number">(Math 8)</span></li>
+          <li><span class="course-term">Fall 2024:</span> Transition to Higher Mathematics <span class="course-number">(Math 8)</span></li>
+          <li><span class="course-term">Fall 2024:</span> Calculus II <span class="course-number">(Math 3B)</span></li>
+        </ul>
+        <p class="teaching-award"><strong>Teaching award:</strong> Mochizuki Memorial Instructor Award, UC Santa Barbara (June 2026).</p>
+      </section>
+
+      <section class="teaching-section" aria-labelledby="odu-heading">
+        <h2 id="odu-heading">Old Dominion University</h2>
+        <ul class="course-list">
+          <li><span class="course-term">Spring 2024:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+          <li><span class="course-term">Summer 2023:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+          <li><span class="course-term">Spring 2023:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+          <li><span class="course-term">Fall 2022:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+          <li><span class="course-term">Spring 2022:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+          <li><span class="course-term">Fall 2021:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+          <li><span class="course-term">Summer 2021:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+          <li><span class="course-term">Fall 2020:</span> Precalculus I <span class="course-number">(Math 162)</span></li>
+        </ul>
+      </section>
+
+      <footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
+    </main>
+  </div>
 </body>
 </html>
