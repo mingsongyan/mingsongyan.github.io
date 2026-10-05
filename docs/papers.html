@@ -131,7 +131,6 @@
       line-height: 1.2;
     }
     .dissertation-entry { margin: 0; line-height: 1.3; }
-    .dissertation-advisor { margin: 0.15em 0 0; line-height: 1.3; }
     #dissertation { scroll-margin-top: 16px; }
     @media print {
       .dissertation-section { break-inside: avoid; }
@@ -236,7 +235,6 @@
 <div class="dissertation-entry">
 <span class="paper-title">Deep Learning in Reproducing Kernel Banach Spaces</span>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>. Ph.D. dissertation, Old Dominion University, 2024.<span class="paper-resources"> <a href="https://digitalcommons.odu.edu/mathstat_etds/128/" title="Dissertation record and download at Old Dominion University">[dissertation]</a></span></p>
-<p class="dissertation-advisor">Advisor: Prof. <a href="https://www.odu.edu/directory/yuesheng-xu">Yuesheng Xu</a>.</p>
 </div>
 </section><footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
 </main>
@@ -247,7 +245,7 @@
 
   // To add a paper, give its li a data-topics attribute containing one or more
   // of these keys, separated by spaces. A paper may belong to multiple topics.
-  var topics = {"sparsity": "Sparse optimization", "low-rank": "Low-rank structure in LLMs", "graph-transfer": "Neural ODEs", "transformers": "In-context learning", "function-spaces": "Function spaces"};
+  var topics = {"sparsity": "Sparse optimization", "low-rank": "Low-rank structure in LLMs", "graph-transfer": "Size transferability", "transformers": "In-context learning", "function-spaces": "Function spaces"};
   var entries = Array.from(document.querySelectorAll('.paper-list > li'));
   var sections = Array.from(document.querySelectorAll('.paper-section'));
   var panel = document.getElementById('topic-filter');
