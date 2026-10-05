@@ -118,6 +118,25 @@
     .topic-filter .topic-actions { font-size: 0.95em; }
     .topic-filter a { color: #224b8d; }
     .filter-fallback { font-size: 0.9em; color: #555555; }
+
+    /* The dissertation is shown below the complete publication list, not as an article. */
+    .dissertation-section { margin: 1.7em 0 0; }
+    .dissertation-section h2 {
+      margin: 0 0 0.5em;
+      padding: 0.6em 0 0.2em;
+      border-bottom: 1px solid #aaaaaa;
+      color: #4169e1;
+      font-size: 1.25em;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .dissertation-entry { margin: 0; line-height: 1.3; }
+    .dissertation-advisor { margin: 0.15em 0 0; line-height: 1.3; }
+    #dissertation { scroll-margin-top: 16px; }
+    @media print {
+      .dissertation-section { break-inside: avoid; }
+      .dissertation-section h2 { break-after: avoid; }
+    }
 </style>
 </head>
 <body>
@@ -133,7 +152,7 @@
 </nav>
 <main id="layout-content" tabindex="-1">
 <div id="toptitle"><h1>Publications</h1></div>
-<p class="papers-intro"><span class="authorship-key"><svg aria-label="Diamond" class="authorship-diamond" focusable="false" height="16" role="img" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></span> implies alphabetical authorship.</p>
+<p class="papers-intro"><span class="authorship-key"><svg aria-label="Diamond" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></span> implies alphabetical authorship.</p>
 <aside aria-label="Selected research topic" class="topic-filter" hidden="" id="topic-filter">
 <p aria-live="polite" class="topic-heading" role="status">
 <strong id="topic-label"></strong>
@@ -169,7 +188,7 @@
 </li>
 <li data-topics="function-spaces" id="hypothesis-spaces">
 <span class="paper-title">Hypothesis Spaces for Deep Learning</span>
-<p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Neural Networks</em>, 193, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Hypothesis Spaces for Deep Learning" href="https://arxiv.org/pdf/2403.03353" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Hypothesis Spaces for Deep Learning" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767" title="Official journal publication">[journal]</a></span></p>
+<p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Neural Networks</em>, 193, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Hypothesis Spaces for Deep Learning" href="https://arxiv.org/pdf/2403.03353" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Hypothesis Spaces for Deep Learning" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767" title="Official journal publication">[journal]</a></span></p>
 </li>
 </ol>
 </section>
@@ -191,15 +210,15 @@
 <ol class="paper-list">
 <li data-topics="sparsity" id="sparse-deep-learning">
 <span class="paper-title">Sparse Deep Learning Models with the <span class="math-term">ℓ<sub>1</sub></span> Regularization</span>
-<p class="paper-details">Lixin Shen, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>arXiv preprint</em>, arXiv:2408.02801, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Deep Learning Models with the ℓ 1 Regularization" href="https://arxiv.org/pdf/2408.02801" title="Latest arXiv version (PDF)">[paper]</a></span></p>
+<p class="paper-details">Lixin Shen, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>arXiv preprint</em>, arXiv:2408.02801, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Deep Learning Models with the ℓ 1 Regularization" href="https://arxiv.org/pdf/2408.02801" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
 <li data-topics="sparsity" id="inexact-fixed-point">
 <span class="paper-title">Inexact Fixed-Point Proximity Algorithm for the <span class="math-term">ℓ<sub>0</sub></span> Sparse Regularization Problem</span>
-<p class="paper-details">Ronglong Fang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Journal of Scientific Computing</em>, 100(2):58, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://arxiv.org/pdf/2404.17689" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://link.springer.com/article/10.1007/s10915-024-02600-7" title="Official journal publication">[journal]</a></span></p>
+<p class="paper-details">Ronglong Fang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Journal of Scientific Computing</em>, 100(2):58, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://arxiv.org/pdf/2404.17689" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://link.springer.com/article/10.1007/s10915-024-02600-7" title="Official journal publication">[journal]</a></span></p>
 </li>
 <li data-topics="sparsity function-spaces" id="sparse-representer-theorems">
 <span class="paper-title">Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces</span>
-<p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Journal of Machine Learning Research</em>, 25(93):1–45, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://arxiv.org/pdf/2305.12584" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://jmlr.org/papers/v25/23-0645.html" title="Official journal publication">[journal]</a></span></p>
+<p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Journal of Machine Learning Research</em>, 25(93):1–45, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://arxiv.org/pdf/2305.12584" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://jmlr.org/papers/v25/23-0645.html" title="Official journal publication">[journal]</a></span></p>
 </li>
 </ol>
 </section>
@@ -208,11 +227,18 @@
 <ol class="paper-list">
 <li data-topics="sparsity" id="parameter-choices">
 <span class="paper-title">Parameter Choices for Sparse Regularization with the <span class="math-term">ℓ<sub>1</sub></span> Norm</span>
-<p class="paper-details">Qianru Liu, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Inverse Problems</em>, 39(2):025004, 2023.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://arxiv.org/pdf/2205.07170" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://doi.org/10.1088/1361-6420/acad22" title="Official journal publication">[journal]</a></span></p>
+<p class="paper-details">Qianru Liu, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>. <em>Inverse Problems</em>, 39(2):025004, 2023.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://arxiv.org/pdf/2205.07170" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://doi.org/10.1088/1361-6420/acad22" title="Official journal publication">[journal]</a></span></p>
 </li>
 </ol>
 </section>
-<footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
+<section aria-labelledby="dissertation-heading" class="dissertation-section" id="dissertation">
+<h2 id="dissertation-heading">Ph.D. Dissertation</h2>
+<div class="dissertation-entry">
+<span class="paper-title">Deep Learning in Reproducing Kernel Banach Spaces</span>
+<p class="paper-details"><span class="self-author">Mingsong Yan</span>. Ph.D. dissertation, Old Dominion University, 2024.<span class="paper-resources"> <a href="https://digitalcommons.odu.edu/mathstat_etds/128/" title="Dissertation record and download at Old Dominion University">[dissertation]</a></span></p>
+<p class="dissertation-advisor">Advisor: Prof. <a href="https://www.odu.edu/directory/yuesheng-xu">Yuesheng Xu</a>.</p>
+</div>
+</section><footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
 </main>
 </div>
 <script>
@@ -221,11 +247,12 @@
 
   // To add a paper, give its li a data-topics attribute containing one or more
   // of these keys, separated by spaces. A paper may belong to multiple topics.
-  var topics = {"sparsity": "Sparse learning", "low-rank": "Low-rank pretraining", "graph-transfer": "Size transferability", "transformers": "In-context learning", "function-spaces": "Function spaces"};
+  var topics = {"sparsity": "Sparse optimization", "low-rank": "Low-rank structure in LLMs", "graph-transfer": "Neural ODEs", "transformers": "In-context learning", "function-spaces": "Function spaces"};
   var entries = Array.from(document.querySelectorAll('.paper-list > li'));
   var sections = Array.from(document.querySelectorAll('.paper-section'));
   var panel = document.getElementById('topic-filter');
   var label = document.getElementById('topic-label');
+  var dissertation = document.getElementById('dissertation');
 
   function applyTopic() {
     var requested = new URLSearchParams(window.location.search).get('topic') ||
@@ -241,6 +268,8 @@
         .some(function (entry) { return !entry.hidden; });
       section.hidden = !hasVisibleEntry;
     });
+    // Keep topic views restricted to related articles; show the thesis in the complete list.
+    if (dissertation) dissertation.hidden = !!topic;
     panel.hidden = !topic;
     label.textContent = topic ? topics[topic] : '';
     document.title = topic ? 'Publications: ' + topics[topic] + ' - Mingsong Yan'

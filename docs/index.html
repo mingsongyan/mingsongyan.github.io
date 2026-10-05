@@ -48,30 +48,30 @@
       color: #000000;
     }
     .research-themes > p { margin: 0 0 0.55em; line-height: 1.4; }
-    .theme-list { margin: 0; padding-left: 1.7em; list-style: square outside; }
-    .theme-list > li { margin: 0 0 0.7em; line-height: 1.4; }
-    .theme-list > li:last-child { margin-bottom: 0; }
-    .theme-label { font-weight: 700; color: #000000; }
-    .theme-papers {
-      margin: 0.3em 0 0;
+    .theme-group + .theme-group { margin-top: 0.9em; }
+    .theme-heading {
+      margin: 0 0 0.35em;
       padding: 0;
-      font-size: 0.95em;
-      line-height: 1.5;
+      border: 0;
+      font-size: 1em;
+      font-weight: 700;
+      line-height: 1.4;
+      color: #000000;
     }
-    .theme-papers-label { color: #444444; }
-    .theme-papers a {
-      display: inline-block;
-      margin-left: 0.3em;
-      color: #224b8d;
-      font-weight: 400;
-      white-space: nowrap;
+    .research-topic-list {
+      margin: 0;
+      padding-left: 1.7em;
+      list-style: square outside;
     }
+    .research-topic-list > li { margin: 0 0 0.45em; line-height: 1.4; }
+    .research-topic-list > li:last-child { margin-bottom: 0; }
+    .research-topic-list a { color: #224b8d; font-weight: 400; }
     .publications-link { margin: 0; line-height: 1.4; }
     #footer { margin-top: 3em; }
     @media (max-width: 640px) {
       .research-themes { padding: 0.75em; }
-      .theme-list { padding-left: 1.25em; }
-      .theme-list > li { margin-bottom: 0.85em; }
+      .research-topic-list { padding-left: 1.25em; }
+      .research-topic-list > li { margin-bottom: 0.7em; }
     }
     @media print { .research-themes { break-inside: avoid; } }
 </style></head>
@@ -108,29 +108,29 @@
 </div>
 </div>
 </div>
-<section aria-labelledby="about-heading" class="biography"><h2 id="about-heading">About</h2>
-<!-- Biography: employment, education, mentoring and service from the supplied CV; Sui Tang is identified as a mentor by the author. Mentor destinations verified on official university websites. -->
-<p>I am a Visiting Assistant Professor in the Department of Mathematics at the University of California, Santa Barbara, where I work with my postdoctoral mentor, Prof. <a href="https://web.math.ucsb.edu/~suitang/">Sui Tang</a>. At UCSB, I also co-mentor undergraduate and graduate researchers with Prof. Tang and organize the Applied Math/PDE/Data Science Seminar.</p>
-<p>I received my Ph.D. in Computational and Applied Mathematics from Old Dominion University in 2024 under the supervision of Prof. <a href="https://www.odu.edu/directory/yuesheng-xu">Yuesheng Xu</a>. My dissertation was titled <em>Deep Learning in Reproducing Kernel Banach Spaces</em>. Previously, I earned my B.S. through the Tang Aoqing Honors Program in Mathematics at Jilin University in 2018.</p>
+<section aria-labelledby="about-heading" class="biography">
+<h2 id="about-heading">About</h2>
+<p>I am a Visiting Assistant Professor in the Department of Mathematics at the University of California, Santa Barbara, where I work with Prof. <a href="https://web.math.ucsb.edu/~suitang/">Sui Tang</a>. At UCSB, I also co-mentor undergraduate and graduate researchers with Prof. Tang and organize the <a href="https://sites.google.com/site/ucsbpdeappliedmathseminar/">Applied Math/PDE/Data Science Seminar</a>.</p>
+<p>I received my Ph.D. in Computational and Applied Mathematics from Old Dominion University in 2024 under the supervision of Prof. <a href="https://www.odu.edu/directory/yuesheng-xu">Yuesheng Xu</a>. My dissertation was titled <em>Deep Learning in Reproducing Kernel Banach Spaces</em>. Previously, I earned my B.S. through the Tang Aoqing Honors Program in Mathematics at Jilin University in China in 2018.</p>
 </section>
 <section aria-labelledby="research-heading" id="research"><h2 id="research-heading">Research</h2><p class="research-overview">My research focuses on the mathematical foundations of <strong>efficient and interpretable machine learning</strong>. Using tools from optimization, functional analysis, and dynamical systems, I study how mathematical structure can help us understand and improve modern learning models, particularly neural networks and large language models.</p>
 <section aria-labelledby="themes-intro" class="research-themes">
 <p id="themes-intro">My work centers on two closely connected themes:</p>
-<ul class="theme-list">
-<li><strong class="theme-label">Efficiency:</strong> Sparse optimization; size transferability of neural ODEs on graphs; low-rank structure in LLMs.
-          <p class="theme-papers"><span class="theme-papers-label">Papers by topic:</span>
-<a aria-label="Browse publications on Sparse learning" href="papers.html?topic=sparsity" title="Browse publications: Sparse learning">[Sparse learning]</a>
-<a aria-label="Browse publications on Size transferability" href="papers.html?topic=graph-transfer" title="Browse publications: Size transferability">[Size transferability]</a>
-<a aria-label="Browse publications on Low-rank pretraining" href="papers.html?topic=low-rank" title="Browse publications: Low-rank pretraining">[Low-rank pretraining]</a>
-</p>
-</li>
-<li><strong class="theme-label">Interpretability:</strong> In-context learning with transformers; function-space perspectives on deep learning.
-          <p class="theme-papers"><span class="theme-papers-label">Papers by topic:</span>
-<a aria-label="Browse publications on In-context learning" href="papers.html?topic=transformers" title="Browse publications: In-context learning">[In-context learning]</a>
-<a aria-label="Browse publications on Function spaces" href="papers.html?topic=function-spaces" title="Browse publications: Function spaces">[Function spaces]</a>
-</p>
-</li>
+<div class="theme-group">
+<h3 class="theme-heading">Efficiency</h3>
+<ul class="research-topic-list">
+<li><a href="papers.html?topic=sparsity" title="Browse publications: Sparse optimization">Sparse optimization</a>: Developing sparse regularization methods and algorithms for signal and image processing and deep learning, aiming to improve computational efficiency and reconstruction or prediction accuracy.</li>
+<li><a href="papers.html?topic=graph-transfer" title="Browse publications: Neural ODEs">Neural ODEs</a>: Understanding when Neural ODEs trained on small graphs can transfer to larger, structurally similar graphs, reducing the need for expensive training on large graphs.</li>
+<li><a href="papers.html?topic=low-rank" title="Browse publications: Low-rank structure in LLMs">Low-rank structure in LLMs</a>: Exploring low-rank structure in LLM activations to guide architecture design and improve pretraining efficiency.</li>
 </ul>
+</div>
+<div class="theme-group">
+<h3 class="theme-heading">Interpretability</h3>
+<ul class="research-topic-list">
+<li><a href="papers.html?topic=transformers" title="Browse publications: In-context learning">In-context learning</a>: Studying how transformers learn from examples in context, with a focus on their connections to kernel ridge regression and iterative algorithms.</li>
+<li><a href="papers.html?topic=function-spaces" title="Browse publications: Function spaces">Function spaces</a>: Developing function-space frameworks for deep learning, including hypothesis spaces and representer theorems.</li>
+</ul>
+</div>
 </section>
 <p class="publications-link">See <a href="papers.html">Publications</a> for the complete list of papers.</p></section><section aria-labelledby="support-heading" class="research-support">
 <h2 id="support-heading">Research support</h2>
