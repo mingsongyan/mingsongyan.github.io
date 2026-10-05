@@ -29,7 +29,7 @@
       color: #4169e1;
     }
     .papers-intro { margin: 0 0 1.1em; font-size: 0.95em; line-height: 1.3; }
-    .authorship-note { margin-left: 1.3em; }
+    .authorship-note { display: block; margin: 0.4em 0 0; }
     .paper-section { margin: 0 0 1.5em; }
     .paper-section h2 {
       margin: 0 0 0.4em;
@@ -123,9 +123,7 @@
 <a class="skip-link" href="#layout-content">Skip to content</a>
 <div class="site-layout">
 <nav aria-label="Main navigation" id="layout-menu">
-<div class="menu-list">
-<div class="menu-item"><a href="index.html">Home</a></div>
-<div class="menu-item"><a href="research.html">Research</a></div>
+<div class="menu-list"><div class="menu-item"><a href="index.html">Home</a></div>
 <div class="menu-item"><a aria-current="page" class="current" href="papers.html">Publications</a></div>
 <div class="menu-item"><a href="talks.html">Presentations</a></div>
 <div class="menu-item"><a href="teaching.html">Teaching</a></div>
@@ -135,17 +133,15 @@
 <main id="layout-content" tabindex="-1">
 <div id="toptitle"><h1>Publications</h1></div>
 <p class="papers-intro">
-<a href="https://scholar.google.com/citations?user=5XZGt0gAAAAJ&amp;hl=en">Google Scholar</a>
-<span class="authorship-note"><strong class="authorship-key">†</strong> Alphabetical authorship.</span>
+  <strong class="authorship-key">&dagger;</strong> indicates papers in which the authors are listed alphabetically by surname.
 </p>
 <aside aria-label="Selected research topic" class="topic-filter" hidden="" id="topic-filter">
 <p aria-live="polite" class="topic-heading" role="status">
 <strong id="topic-label"></strong>
 </p>
-<p class="topic-actions"><a href="papers.html" id="show-all-publications">Show all publications</a><span aria-hidden="true" class="topic-separator">/</span><a href="research.html">Back to research</a></p>
+<p class="topic-actions"><a href="papers.html" id="show-all-publications">Show all publications</a><span aria-hidden="true" class="topic-separator">/</span><a href="index.html#research">Back to research</a></p>
 </aside>
 <noscript><p class="filter-fallback">JavaScript is off, so all publications are shown instead of a topic-filtered list.</p></noscript>
-
 <!-- Bibliographic source: the supplied 2026_Job_Application.pdf.
          Titles, author order, years, and publication status are unchanged.
          Titles are non-clickable text. [paper] links only to the latest arXiv PDF.
@@ -259,3 +255,4 @@
 }());
 </script></body>
 </html>
+

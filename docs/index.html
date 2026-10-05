@@ -1,61 +1,139 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Mingsong Yan</title>
-  <link rel="stylesheet" href="site.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Mingsong Yan</title>
+<link href="site.css" rel="stylesheet"/>
+<meta content="Mingsong Yan: mathematical foundations of efficient and interpretable machine learning. Research, publications, presentations, and teaching." name="description"/><style>
+    /* Homepage additions. Research now lives at index.html#research. */
+    #layout-content {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 16px;
+      line-height: 1.4;
+    }
+    #toptitle {
+      padding: 0 0 0.2em;
+      margin: 0 0 1em;
+      border-bottom: 1px solid #aaaaaa;
+    }
+    #toptitle h1 {
+      margin: 0.3em 0 0;
+      padding: 0 0 0.1em;
+      font-size: 1.65em;
+      font-weight: 700;
+      line-height: 1.1;
+      color: #4169e1;
+    }
+    #layout-content h2 {
+      margin: 0.7em 0 0.55em;
+      padding: 0.65em 0 0.25em;
+      border-bottom: 1px solid #aaaaaa;
+      color: #4169e1;
+      font-size: 1.25em;
+      line-height: 1.2;
+    }
+    .profile { font-size: 16px; line-height: 1.35; }
+    .profile-name { font-size: 18px; font-weight: 700; }
+    .profile-links { margin-top: 5px; font-weight: 700; }
+    .biography p { margin: 0 0 0.8em; line-height: 1.4; }
+    #research { scroll-margin-top: 16px; }
+    .research-overview { margin: 0 0 1.35em; line-height: 1.4; }
+    .research-themes {
+      margin: 0 0 1.35em;
+      padding: 0.65em 0.85em 0.75em;
+      border: 1px solid #c5c5c5;
+      background-color: #f6f6f6;
+      color: #000000;
+    }
+    .research-themes > p { margin: 0 0 0.55em; line-height: 1.4; }
+    .theme-list { margin: 0; padding-left: 1.7em; list-style: square outside; }
+    .theme-list > li { margin: 0 0 0.7em; line-height: 1.4; }
+    .theme-list > li:last-child { margin-bottom: 0; }
+    .theme-label { font-weight: 700; color: #000000; }
+    .theme-papers {
+      margin: 0.3em 0 0;
+      padding: 0;
+      font-size: 0.95em;
+      line-height: 1.5;
+    }
+    .theme-papers-label { color: #444444; }
+    .theme-papers a {
+      display: inline-block;
+      margin-left: 0.3em;
+      color: #224b8d;
+      font-weight: 400;
+      white-space: nowrap;
+    }
+    .publications-link { margin: 0; line-height: 1.4; }
+    #footer { margin-top: 3em; }
+    @media (max-width: 640px) {
+      .research-themes { padding: 0.75em; }
+      .theme-list { padding-left: 1.25em; }
+      .theme-list > li { margin-bottom: 0.85em; }
+    }
+    @media print { .research-themes { break-inside: avoid; } }
+</style></head>
 <body>
 <a class="skip-link" href="#layout-content">Skip to content</a>
 <div class="site-layout">
-  <nav id="layout-menu" aria-label="Main navigation">
-    <div class="menu-list">
-      <div class="menu-item"><a href="index.html" class="current" aria-current="page">Home</a></div>
-      <div class="menu-item"><a href="research.html">Research</a></div>
-      <div class="menu-item"><a href="papers.html">Publications</a></div>
-      <div class="menu-item"><a href="talks.html">Talks</a></div>
-      <div class="menu-item"><a href="teaching.html">Teaching</a></div>
-      <div class="menu-item"><a href="cv.html">CV</a></div>
-    </div>
-  </nav>
-  <main id="layout-content" tabindex="-1">
-    <div id="toptitle"><h1>Mingsong Yan</h1></div>
-    <!-- EDIT YOUR PAGE CONTENT BELOW -->
+<nav aria-label="Main navigation" id="layout-menu">
+<div class="menu-list"><div class="menu-item"><a aria-current="page" class="current" href="index.html">Home</a></div>
+<div class="menu-item"><a href="papers.html">Publications</a></div>
+<div class="menu-item"><a href="talks.html">Presentations</a></div>
+<div class="menu-item"><a href="teaching.html">Teaching</a></div>
+<div class="menu-item"><a href="cv.html">CV</a></div>
+</div>
+</nav>
+<main id="layout-content" tabindex="-1">
+<div id="toptitle"><h1>Mingsong Yan</h1></div>
 <div class="profile-row">
-  <!-- PHOTO: Replace the placeholder div below with this img element after
-       uploading your photo as docs/images/mingsongyan.jpg:
+<!-- Replace this portrait-placeholder with the image element below only after
+       uploading your own photo. Keep the original photograph's proportions.
        <img class="portrait" src="images/mingsongyan.jpg"
             alt="Portrait of Mingsong Yan" width="180">
-       Keep the profile text beside the image. -->
-  <div class="portrait-placeholder" role="img" aria-label="Placeholder for your portrait">
-    <span>Your photo</span>
-  </div>
-  <div class="profile">
-  <strong class="profile-name">Mingsong Yan</strong><br>
-  Visiting Assistant Professor<br>
-  Department of Mathematics<br>
-  University of California, Santa Barbara<br>
-  Email: mingsongyan at ucsb dot edu
-
-  <div class="profile-links">
-    <a href="cv.html">CV</a>
-    <span aria-hidden="true">&nbsp; / &nbsp;</span>
-    <a href="https://scholar.google.com/citations?user=5XZGt0gAAAAJ&amp;hl=en">
-      Google Scholar
-    </a>
-    </div>
-  </div>
+       No photograph was supplied for this archive; no other person's photo is used. -->
+<div aria-label="Portrait placeholder" class="portrait-placeholder" role="img">
+<span>Your photo</span>
 </div>
-<h2>About</h2>
-<p class="placeholder">Add a short biography here: your current position, research background, and academic interests.</p>
-<h2>Research interests</h2>
-<p class="placeholder">Introduce your main research questions and directions here. The Research and Papers pages provide room for more detail.</p>
-<h2>Contact</h2>
-<p>Please contact me at <a href="mailto:mingsongyan@ucsb.edu">mingsongyan@ucsb.edu</a>.</p>
-    <!-- END PAGE CONTENT -->
-    <footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
-  </main>
+<div class="profile">
+<strong class="profile-name">Mingsong Yan</strong><br/>
+    Visiting Assistant Professor<br/>
+    Department of Mathematics<br/>
+    University of California, Santa Barbara<br/>
+    Email: mingsongyan at ucsb dot edu
+    <div class="profile-links">
+<a href="cv.html">CV</a><span aria-hidden="true">  /  </span><a href="https://scholar.google.com/citations?user=5XZGt0gAAAAJ&amp;hl=en">Google Scholar</a>
+</div>
+</div>
+</div>
+<section aria-labelledby="about-heading" class="biography">
+<h2 id="about-heading">About</h2>
+<!-- Biography source: Education in the supplied 2026_Job_Application.pdf. -->
+<p>I received my Ph.D. in Computational and Applied Mathematics from Old Dominion University in 2024, advised by Prof. Yuesheng Xu.</p>
+</section>
+<section aria-labelledby="research-heading" id="research"><h2 id="research-heading">Research</h2><p class="research-overview">My research focuses on the mathematical foundations of <strong>efficient and interpretable machine learning</strong>. Using tools from optimization, functional analysis, and dynamical systems, I study how mathematical structure can help us understand and improve modern learning models, particularly neural networks and large language models.</p>
+<section aria-labelledby="themes-intro" class="research-themes">
+<p id="themes-intro">My work centers on two closely connected themes:</p>
+<ul class="theme-list">
+<li><strong class="theme-label">Efficiency:</strong> Sparse optimization; size transferability of neural ODEs on graphs; low-rank structure in LLMs.
+          <p class="theme-papers"><span class="theme-papers-label">Papers by topic:</span>
+<a aria-label="Browse publications on Sparse learning" href="papers.html?topic=sparsity" title="Browse publications: Sparse learning">[Sparse learning]</a>
+<a aria-label="Browse publications on Size transferability" href="papers.html?topic=graph-transfer" title="Browse publications: Size transferability">[Size transferability]</a>
+<a aria-label="Browse publications on Low-rank pretraining" href="papers.html?topic=low-rank" title="Browse publications: Low-rank pretraining">[Low-rank pretraining]</a>
+</p>
+</li>
+<li><strong class="theme-label">Interpretability:</strong> In-context learning with transformers; function-space perspectives on deep learning.
+          <p class="theme-papers"><span class="theme-papers-label">Papers by topic:</span>
+<a aria-label="Browse publications on In-context learning" href="papers.html?topic=transformers" title="Browse publications: In-context learning">[In-context learning]</a>
+<a aria-label="Browse publications on Function spaces" href="papers.html?topic=function-spaces" title="Browse publications: Function spaces">[Function spaces]</a>
+</p>
+</li>
+</ul>
+</section>
+<p class="publications-link">See <a href="papers.html">Publications</a> for the complete list of papers.</p></section><footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer></main>
 </div>
 </body>
 </html>
+
