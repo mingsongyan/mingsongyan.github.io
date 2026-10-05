@@ -113,7 +113,6 @@
     }
     .topic-filter p { margin: 0; line-height: 1.4; }
     .topic-filter .topic-heading { margin-bottom: 0.2em; }
-    .topic-filter .topic-count { margin-left: 0.65em; color: #555555; }
     .topic-filter .topic-actions { font-size: 0.95em; }
     .topic-filter a { color: #224b8d; }
     .topic-filter .topic-separator { margin: 0 0.5em; color: #666666; }
@@ -141,7 +140,7 @@
 </p>
 <aside aria-label="Selected research topic" class="topic-filter" hidden="" id="topic-filter">
 <p aria-live="polite" class="topic-heading" role="status">
-<strong id="topic-label"></strong><span class="topic-count" id="topic-count"></span>
+<strong id="topic-label"></strong>
 </p>
 <p class="topic-actions"><a href="papers.html" id="show-all-publications">Show all publications</a><span aria-hidden="true" class="topic-separator">/</span><a href="research.html">Back to research</a></p>
 </aside>
@@ -227,23 +226,20 @@
 
   // To add a paper, give its li a data-topics attribute containing one or more
   // of these keys, separated by spaces. A paper may belong to multiple topics.
-  var topics = {"sparsity": "Sparse learning", "low-rank": "Low-rank pretraining", "graph-transfer": "Graph size transfer", "transformers": "Transformers and ICL", "function-spaces": "Hypothesis spaces"};
+  var topics = {"sparsity": "Sparse learning", "low-rank": "Low-rank pretraining", "graph-transfer": "Size transferability", "transformers": "In-context learning", "function-spaces": "Function spaces"};
   var entries = Array.from(document.querySelectorAll('.paper-list > li'));
   var sections = Array.from(document.querySelectorAll('.paper-section'));
   var panel = document.getElementById('topic-filter');
   var label = document.getElementById('topic-label');
-  var countLabel = document.getElementById('topic-count');
 
   function applyTopic() {
     var requested = new URLSearchParams(window.location.search).get('topic') ||
                     document.body.getAttribute('data-preview-topic') || '';
     var topic = Object.prototype.hasOwnProperty.call(topics, requested) ? requested : '';
-    var shown = 0;
     entries.forEach(function (entry) {
       var tags = (entry.getAttribute('data-topics') || '').split(/\s+/);
       var matches = !topic || tags.indexOf(topic) !== -1;
       entry.hidden = !matches;
-      if (matches) shown += 1;
     });
     sections.forEach(function (section) {
       var hasVisibleEntry = Array.from(section.querySelectorAll('.paper-list > li'))
@@ -252,7 +248,6 @@
     });
     panel.hidden = !topic;
     label.textContent = topic ? topics[topic] : '';
-    countLabel.textContent = topic ? shown + (shown === 1 ? ' paper' : ' papers') : '';
     document.title = topic ? 'Publications: ' + topics[topic] + ' - Mingsong Yan'
                            : 'Publications - Mingsong Yan';
     document.body.setAttribute('data-active-topic', topic || 'all');
