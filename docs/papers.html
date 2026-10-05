@@ -101,7 +101,24 @@
       .paper-section h2 { break-after: avoid; }
       .paper-list > li { break-inside: avoid; }
     }
-  </style>
+  
+    /* A topic query hides unrelated entries; the default page still shows all papers. */
+    #layout-content [hidden] { display: none !important; }
+    .topic-filter {
+      margin: 0 0 1.25em;
+      padding: 0.6em 0.8em;
+      border: 1px solid #c5c5c5;
+      background: #f6f6f6;
+      color: #000000;
+    }
+    .topic-filter p { margin: 0; line-height: 1.4; }
+    .topic-filter .topic-heading { margin-bottom: 0.2em; }
+    .topic-filter .topic-count { margin-left: 0.65em; color: #555555; }
+    .topic-filter .topic-actions { font-size: 0.95em; }
+    .topic-filter a { color: #224b8d; }
+    .topic-filter .topic-separator { margin: 0 0.5em; color: #666666; }
+    .filter-fallback { font-size: 0.9em; color: #555555; }
+</style>
 </head>
 <body>
 <a class="skip-link" href="#layout-content">Skip to content</a>
@@ -122,6 +139,14 @@
 <a href="https://scholar.google.com/citations?user=5XZGt0gAAAAJ&amp;hl=en">Google Scholar</a>
 <span class="authorship-note"><strong class="authorship-key">†</strong> Alphabetical authorship.</span>
 </p>
+<aside aria-label="Selected research topic" class="topic-filter" hidden="" id="topic-filter">
+<p aria-live="polite" class="topic-heading" role="status">
+<strong id="topic-label"></strong><span class="topic-count" id="topic-count"></span>
+</p>
+<p class="topic-actions"><a href="papers.html" id="show-all-publications">Show all publications</a><span aria-hidden="true" class="topic-separator">/</span><a href="research.html">Back to research</a></p>
+</aside>
+<noscript><p class="filter-fallback">JavaScript is off, so all publications are shown instead of a topic-filtered list.</p></noscript>
+
 <!-- Bibliographic source: the supplied 2026_Job_Application.pdf.
          Titles, author order, years, and publication status are unchanged.
          Titles are non-clickable text. [paper] links only to the latest arXiv PDF.
@@ -135,18 +160,20 @@
          https://arxiv.org/abs/2305.12584 (Sparse Representer Theorems).
          The latest arXiv upload need not be identical to the publisher's final version.
          To add a paper, copy a li into its year section and edit its content. -->
-<section aria-labelledby="year-2026" class="paper-section">
+<!-- Topic browsing is implemented in this file. Use e.g. papers.html?topic=sparsity.
+         Per-paper data-topics values are editorial groupings from the supplied CV.
+         A paper can belong to more than one group; no publication details were changed. --><section aria-labelledby="year-2026" class="paper-section">
 <h2 id="year-2026">2026</h2>
 <ol class="paper-list">
-<li id="sparse-random-graphs">
+<li data-topics="graph-transfer" id="sparse-random-graphs">
 <span class="paper-title">Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence</span>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Zhida Wang, Sui Tang. <em>arXiv preprint</em>, arXiv:2606.26662, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence" href="https://arxiv.org/pdf/2606.26662" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
-<li id="transformers-kernel-regression">
+<li data-topics="transformers" id="transformers-kernel-regression">
 <span class="paper-title">Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression</span>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Dongyang Li, Charles Kulick, Sui Tang. <em>arXiv preprint</em>, arXiv:2605.08475, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression" href="https://arxiv.org/pdf/2605.08475" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
-<li id="hypothesis-spaces">
+<li data-topics="function-spaces" id="hypothesis-spaces">
 <span class="paper-title">Hypothesis Spaces for Deep Learning</span>
 <p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Authors listed in alphabetical order">†</sup>. <em>Neural Networks</em>, 193, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Hypothesis Spaces for Deep Learning" href="https://arxiv.org/pdf/2403.03353" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Hypothesis Spaces for Deep Learning" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767" title="Official journal publication">[journal]</a></span></p>
 </li>
@@ -155,11 +182,11 @@
 <section aria-labelledby="year-2025" class="paper-section">
 <h2 id="year-2025">2025</h2>
 <ol class="paper-list">
-<li id="continuous-depth-gnn">
+<li data-topics="graph-transfer" id="continuous-depth-gnn">
 <span class="paper-title">On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks</span>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Charles Kulick, Sui Tang. Accepted for publication in <em>SIAM Journal on Mathematics of Data Science</em>. arXiv:2510.03923, 2025.<span class="paper-resources"><a aria-label="Latest arXiv PDF: On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks" href="https://arxiv.org/pdf/2510.03923" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
-<li id="cola">
+<li data-topics="low-rank" id="cola">
 <span class="paper-title">CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation</span>
 <p class="paper-details">Ziyue Liu, Ruijie Zhang, Zhengyang Wang, <span class="self-author">Mingsong Yan</span>, Zi Yang, Paul Hovland, Bogdan Nicolae, Franck Cappello, Sui Tang, Zheng Zhang. In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025.<span class="paper-resources"><a aria-label="Latest arXiv PDF: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" href="https://arxiv.org/pdf/2502.10940" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" href="https://aclanthology.org/2025.emnlp-main.230/" title="Official conference publication">[proceedings]</a></span></p>
 </li>
@@ -168,15 +195,15 @@
 <section aria-labelledby="year-2024" class="paper-section">
 <h2 id="year-2024">2024</h2>
 <ol class="paper-list">
-<li id="sparse-deep-learning">
+<li data-topics="sparsity" id="sparse-deep-learning">
 <span class="paper-title">Sparse Deep Learning Models with the <span class="math-term">ℓ<sub>1</sub></span> Regularization</span>
 <p class="paper-details">Lixin Shen, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Authors listed in alphabetical order">†</sup>. <em>arXiv preprint</em>, arXiv:2408.02801, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Deep Learning Models with the ℓ 1 Regularization" href="https://arxiv.org/pdf/2408.02801" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
-<li id="inexact-fixed-point">
+<li data-topics="sparsity" id="inexact-fixed-point">
 <span class="paper-title">Inexact Fixed-Point Proximity Algorithm for the <span class="math-term">ℓ<sub>0</sub></span> Sparse Regularization Problem</span>
 <p class="paper-details">Ronglong Fang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Authors listed in alphabetical order">†</sup>. <em>Journal of Scientific Computing</em>, 100(2):58, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://arxiv.org/pdf/2404.17689" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://link.springer.com/article/10.1007/s10915-024-02600-7" title="Official journal publication">[journal]</a></span></p>
 </li>
-<li id="sparse-representer-theorems">
+<li data-topics="sparsity function-spaces" id="sparse-representer-theorems">
 <span class="paper-title">Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces</span>
 <p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Authors listed in alphabetical order">†</sup>. <em>Journal of Machine Learning Research</em>, 25(93):1–45, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://arxiv.org/pdf/2305.12584" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://jmlr.org/papers/v25/23-0645.html" title="Official journal publication">[journal]</a></span></p>
 </li>
@@ -185,7 +212,7 @@
 <section aria-labelledby="year-2023" class="paper-section">
 <h2 id="year-2023">2023</h2>
 <ol class="paper-list">
-<li id="parameter-choices">
+<li data-topics="sparsity" id="parameter-choices">
 <span class="paper-title">Parameter Choices for Sparse Regularization with the <span class="math-term">ℓ<sub>1</sub></span> Norm</span>
 <p class="paper-details">Qianru Liu, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Authors listed in alphabetical order">†</sup>. <em>Inverse Problems</em>, 39(2):025004, 2023.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://arxiv.org/pdf/2205.07170" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://doi.org/10.1088/1361-6420/acad22" title="Official journal publication">[journal]</a></span></p>
 </li>
@@ -194,5 +221,46 @@
 <footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
 </main>
 </div>
-</body>
+<script>
+(function () {
+  'use strict';
+
+  // To add a paper, give its li a data-topics attribute containing one or more
+  // of these keys, separated by spaces. A paper may belong to multiple topics.
+  var topics = {"sparsity": "Sparse learning", "low-rank": "Low-rank pretraining", "graph-transfer": "Graph size transfer", "transformers": "Transformers and ICL", "function-spaces": "Hypothesis spaces"};
+  var entries = Array.from(document.querySelectorAll('.paper-list > li'));
+  var sections = Array.from(document.querySelectorAll('.paper-section'));
+  var panel = document.getElementById('topic-filter');
+  var label = document.getElementById('topic-label');
+  var countLabel = document.getElementById('topic-count');
+
+  function applyTopic() {
+    var requested = new URLSearchParams(window.location.search).get('topic') ||
+                    document.body.getAttribute('data-preview-topic') || '';
+    var topic = Object.prototype.hasOwnProperty.call(topics, requested) ? requested : '';
+    var shown = 0;
+    entries.forEach(function (entry) {
+      var tags = (entry.getAttribute('data-topics') || '').split(/\s+/);
+      var matches = !topic || tags.indexOf(topic) !== -1;
+      entry.hidden = !matches;
+      if (matches) shown += 1;
+    });
+    sections.forEach(function (section) {
+      var hasVisibleEntry = Array.from(section.querySelectorAll('.paper-list > li'))
+        .some(function (entry) { return !entry.hidden; });
+      section.hidden = !hasVisibleEntry;
+    });
+    panel.hidden = !topic;
+    label.textContent = topic ? topics[topic] : '';
+    countLabel.textContent = topic ? shown + (shown === 1 ? ' paper' : ' papers') : '';
+    document.title = topic ? 'Publications: ' + topics[topic] + ' - Mingsong Yan'
+                           : 'Publications - Mingsong Yan';
+    document.body.setAttribute('data-active-topic', topic || 'all');
+  }
+
+  applyTopic();
+  window.addEventListener('pageshow', applyTopic);
+  window.addEventListener('popstate', applyTopic);
+}());
+</script></body>
 </html>
