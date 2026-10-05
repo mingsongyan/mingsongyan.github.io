@@ -53,7 +53,7 @@
     }
     .theme-list > li:last-child { margin-bottom: 0; }
     .theme-label { font-weight: 700; color: #000000; }
-    /* Compact links to representative entries on the Publications page. */
+    /* Compact direct links to the latest arXiv PDFs for representative papers. */
     .theme-papers {
       margin: 0.3em 0 0;
       padding: 0;
@@ -99,7 +99,9 @@
     <!-- Research framing follows Research Interests in the author's supplied
          2026_Job_Application.pdf. This page summarizes efficiency and
          interpretability without adding claims about results or future projects.
-         Selected-paper links use existing IDs in papers.html.
+         Selected-paper links open the corresponding arXiv PDFs in a new tab.
+          Unversioned arXiv URLs select the latest posted version.
+          Destinations match the [paper] links in the supplied papers.html.
           Edit the prose here; leave the filename research.html unchanged. -->
     <p class="research-overview">My research focuses on the mathematical foundations of <strong>efficient and interpretable machine learning</strong>. Using tools from functional analysis, optimization, and dynamical systems, I study how mathematical structure can help us understand and improve modern learning models, particularly neural networks and large language models.</p>
 
@@ -108,15 +110,15 @@
       <ul class="theme-list">
         <li><strong class="theme-label">Efficiency:</strong> Exploiting sparsity and low-rank structure, understanding optimization mechanisms, and studying the transferability of graph neural models across graph sizes.
           <p class="theme-papers"><span class="theme-papers-label">Selected papers:</span>
-            <a href="papers.html#sparse-deep-learning" title="Sparse Deep Learning Models with the ℓ 1 Regularization" aria-label="Publication details: Sparse Deep Learning Models with the ℓ 1 Regularization">[Sparse learning]</a>
-            <a href="papers.html#cola" title="CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" aria-label="Publication details: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation">[Low-rank pretraining]</a>
-            <a href="papers.html#sparse-random-graphs" title="Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence" aria-label="Publication details: Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence">[Sparse graph transfer]</a>
+            <a href="https://arxiv.org/pdf/2408.02801" target="_blank" rel="noopener noreferrer" title="Sparse Deep Learning Models with the ℓ 1 Regularization" aria-label="Latest arXiv PDF (opens in a new tab): Sparse Deep Learning Models with the ℓ 1 Regularization">[Sparse learning]</a>
+            <a href="https://arxiv.org/pdf/2502.10940" target="_blank" rel="noopener noreferrer" title="CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" aria-label="Latest arXiv PDF (opens in a new tab): CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation">[Low-rank pretraining]</a>
+            <a href="https://arxiv.org/pdf/2606.26662" target="_blank" rel="noopener noreferrer" title="Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence" aria-label="Latest arXiv PDF (opens in a new tab): Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence">[Sparse graph transfer]</a>
           </p>
         </li>
         <li><strong class="theme-label">Interpretability:</strong> Developing function-space perspectives on deep learning and understanding how transformers implement classical learning algorithms through in-context learning.
           <p class="theme-papers"><span class="theme-papers-label">Selected papers:</span>
-            <a href="papers.html#transformers-kernel-regression" title="Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression" aria-label="Publication details: Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression">[Transformers and ICL]</a>
-            <a href="papers.html#hypothesis-spaces" title="Hypothesis Spaces for Deep Learning" aria-label="Publication details: Hypothesis Spaces for Deep Learning">[Hypothesis spaces]</a>
+            <a href="https://arxiv.org/pdf/2605.08475" target="_blank" rel="noopener noreferrer" title="Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression" aria-label="Latest arXiv PDF (opens in a new tab): Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression">[Transformers and ICL]</a>
+            <a href="https://arxiv.org/pdf/2403.03353" target="_blank" rel="noopener noreferrer" title="Hypothesis Spaces for Deep Learning" aria-label="Latest arXiv PDF (opens in a new tab): Hypothesis Spaces for Deep Learning">[Hypothesis spaces]</a>
           </p>
         </li>
       </ul>
