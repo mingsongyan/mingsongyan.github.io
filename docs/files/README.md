@@ -1,7 +1,5 @@
-# Public documents
+# Public CV
 
-Keep existing public files in this folder. This update does not require deleting them.
-No CV PDF or evaluation reports are included in this archive.
+`Mingsong_Yan_CV.pdf` is the public CV linked from `cv.html`.
 
-To add a CV, upload the version you want to publish as `CV.pdf`, then enable the
-`files/CV.pdf` link in `cv.html`. Review its contact details before making it public.
+To update the CV later, replace this PDF with a new file using the same filename.

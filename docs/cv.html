@@ -10,7 +10,12 @@
     #layout-content { font-family: Georgia, "Times New Roman", serif; font-size: 16px; line-height: 1.4; }
     #toptitle { padding: 0 0 0.2em; margin: 0 0 1em; border-bottom: 1px solid #aaaaaa; }
     #toptitle h1 { margin: 0.3em 0 0; padding: 0 0 0.1em; font-size: 1.65em; font-weight: 700; line-height: 1.1; color: #4169e1; }
+    .cv-links { margin: 0 0 1em; }
+    .cv-frame { width: 100%; height: 1100px; border: 1px solid #cccccc; }
     #footer { margin-top: 3em; }
+    @media (max-width: 640px) {
+      .cv-frame { height: 760px; }
+    }
 </style></head>
 <body>
 <a class="skip-link" href="#layout-content">Skip to content</a>
@@ -25,13 +30,9 @@
 </nav>
 <main id="layout-content" tabindex="-1">
 <div id="toptitle"><h1>CV</h1></div>
-<p>A downloadable curriculum vitae will be added here.</p>
-<!-- Upload the CV you want to share publicly as docs/files/CV.pdf.
-     Then replace the paragraph above with:
-     <p><a href="files/CV.pdf">Download my CV (PDF)</a></p>
-     No source CV has been included automatically in this archive. -->
+<p class="cv-links"><a href="files/Mingsong_Yan_CV.pdf" target="_blank" rel="noopener">View PDF</a><span aria-hidden="true">&nbsp; / &nbsp;</span><a href="files/Mingsong_Yan_CV.pdf" download>Download PDF</a></p>
+<iframe class="cv-frame" src="files/Mingsong_Yan_CV.pdf" title="Mingsong Yan Curriculum Vitae"></iframe>
 <footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer></main>
 </div>
 </body>
 </html>
-
