@@ -102,7 +102,6 @@
       .paper-section h2 { break-after: avoid; }
       .paper-list > li { break-inside: avoid; }
     }
-
     /* A topic query hides unrelated entries; the default page still shows all papers. */
     #layout-content [hidden] { display: none !important; }
     .topic-filter {
@@ -157,96 +156,118 @@
 <p class="topic-actions"><a href="papers.html" id="show-all-publications">Show all publications</a></p>
 </aside>
 <noscript><p class="filter-fallback">JavaScript is off, so all publications are shown instead of a topic-filtered list.</p></noscript>
+
 <!-- Bibliographic source: the supplied 2026_Job_Application.pdf.
-         Titles, author order, years, and publication status are unchanged.
-         Paper titles link to the official journal/proceedings article when an article URL is available.
-         Otherwise, titles link to the arXiv abstract page (https://arxiv.org/abs/ID).
-         The dissertation title links to its ODU repository record.
-         [paper] links remain direct links to the latest arXiv PDF.
-         Use https://arxiv.org/pdf/ID without a v1/v2/v3 suffix so revisions do not
-         require updating this page. See https://info.arxiv.org/help/faq/references.html.
-         [journal] links to the official journal article. [proceedings] is used for CoLA.
-         The accepted SIAM entry retains its arXiv link; no publisher URL is invented.
-         Additional arXiv records checked for the previously publisher-only PDF links:
-         https://arxiv.org/abs/2502.10940 (CoLA)
-         https://arxiv.org/abs/2404.17689 (Inexact FPPA)
-         https://arxiv.org/abs/2305.12584 (Sparse Representer Theorems).
-         The latest arXiv upload need not be identical to the publisher's final version.
-         To add a paper, copy a li into its year section and edit its content.
-         Update the title href manually when a preprint obtains an official article URL. -->
+     Paper titles link to the official journal/proceedings article when an article URL is available.
+     Otherwise, titles link to the arXiv abstract page (https://arxiv.org/abs/ID).
+     The dissertation title links to its ODU repository record.
+     [paper] links remain direct links to the latest arXiv PDF.
+     Use https://arxiv.org/pdf/ID without a v1/v2/v3 suffix so revisions do not
+     require updating this page. See https://info.arxiv.org/help/faq/references.html.
+     [journal] links to the official journal article. [proceedings] is used for CoLA.
+     Additional arXiv records checked for the previously publisher-only PDF links:
+     https://arxiv.org/abs/2502.10940 (CoLA)
+     https://arxiv.org/abs/2404.17689 (Inexact FPPA)
+     https://arxiv.org/abs/2305.12584 (Sparse Representer Theorems).
+     The latest arXiv upload need not be identical to the publisher's final version.
+     To add a paper, copy a li into its year section and edit its content.
+     Update the title href manually when a preprint obtains an official article URL. -->
+
 <!-- Topic browsing is implemented in this file. Use e.g. papers.html?topic=sparsity.
-         Per-paper data-topics values are editorial groupings from the supplied CV.
-         A paper can belong to more than one group; no publication details were changed. --><section aria-labelledby="year-2026" class="paper-section">
+     Per-paper data-topics values are editorial groupings from the supplied CV.
+     A paper can belong to more than one group; no publication details were changed. -->
+
+<section aria-labelledby="year-2026" class="paper-section">
 <h2 id="year-2026">2026</h2>
 <ol class="paper-list">
+
+<li data-topics="graph-transfer" id="continuous-depth-gnn">
+<a class="paper-title" href="https://epubs.siam.org/doi/10.1137/25M1800822">On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks</a>
+<p class="paper-details"><span class="self-author">Mingsong Yan</span>, Charles Kulick, Sui Tang. <em>SIAM Journal on Mathematics of Data Science</em>, 8(4):1120–1154, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks" href="https://arxiv.org/pdf/2510.03923" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks" href="https://epubs.siam.org/doi/10.1137/25M1800822" title="Official journal publication">[journal]</a></span></p>
+</li>
+
 <li data-topics="graph-transfer" id="sparse-random-graphs">
 <a class="paper-title" href="https://arxiv.org/abs/2606.26662">Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence</a>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Zhida Wang, Sui Tang. <em>arXiv preprint</em>, arXiv:2606.26662, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Zero-Shot Size Transfer for Neural ODEs on Sparse Random Graphs: Graphon Limits and Adjoint Convergence" href="https://arxiv.org/pdf/2606.26662" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
+
 <li data-topics="transformers" id="transformers-kernel-regression">
 <a class="paper-title" href="https://arxiv.org/abs/2605.08475">Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression</a>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Dongyang Li, Charles Kulick, Sui Tang. <em>arXiv preprint</em>, arXiv:2605.08475, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Transformers Can Implement Preconditioned Richardson Iteration for In-Context Gaussian Kernel Regression" href="https://arxiv.org/pdf/2605.08475" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
+
 <li data-topics="function-spaces" id="hypothesis-spaces">
 <a class="paper-title" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767">Hypothesis Spaces for Deep Learning</a>
 <p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>.
 <em>Neural Networks</em>, 193, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Hypothesis Spaces for Deep Learning" href="https://arxiv.org/pdf/2403.03353" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Hypothesis Spaces for Deep Learning" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767" title="Official journal publication">[journal]</a></span></p>
 </li>
+
 </ol>
 </section>
+
 <section aria-labelledby="year-2025" class="paper-section">
 <h2 id="year-2025">2025</h2>
 <ol class="paper-list">
-<li data-topics="graph-transfer" id="continuous-depth-gnn">
-<a class="paper-title" href="https://arxiv.org/abs/2510.03923">On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks</a>
-<p class="paper-details"><span class="self-author">Mingsong Yan</span>, Charles Kulick, Sui Tang. Accepted for publication in <em>SIAM Journal on Mathematics of Data Science</em>. arXiv:2510.03923, 2025.<span class="paper-resources"><a aria-label="Latest arXiv PDF: On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks" href="https://arxiv.org/pdf/2510.03923" title="Latest arXiv version (PDF)">[paper]</a></span></p>
-</li>
+
 <li data-topics="low-rank" id="cola">
 <a class="paper-title" href="https://aclanthology.org/2025.emnlp-main.230/">CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation</a>
 <p class="paper-details">Ziyue Liu, Ruijie Zhang, Zhengyang Wang, <span class="self-author">Mingsong Yan</span>, Zi Yang, Paul Hovland, Bogdan Nicolae, Franck Cappello, Sui Tang, Zheng Zhang.
 In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025.<span class="paper-resources"><a aria-label="Latest arXiv PDF: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" href="https://arxiv.org/pdf/2502.10940" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" href="https://aclanthology.org/2025.emnlp-main.230/" title="Official conference publication">[proceedings]</a></span></p>
 </li>
+
 </ol>
 </section>
+
 <section aria-labelledby="year-2024" class="paper-section">
 <h2 id="year-2024">2024</h2>
 <ol class="paper-list">
+
 <li data-topics="sparsity" id="sparse-deep-learning">
 <a class="paper-title" href="https://arxiv.org/abs/2408.02801">Sparse Deep Learning Models with the <span class="math-term">ℓ<sub>1</sub></span> Regularization</a>
 <p class="paper-details">Lixin Shen, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>.
 <em>arXiv preprint</em>, arXiv:2408.02801, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Deep Learning Models with the ℓ 1 Regularization" href="https://arxiv.org/pdf/2408.02801" title="Latest arXiv version (PDF)">[paper]</a></span></p>
 </li>
+
 <li data-topics="sparsity" id="inexact-fixed-point">
 <a class="paper-title" href="https://link.springer.com/article/10.1007/s10915-024-02600-7">Inexact Fixed-Point Proximity Algorithm for the <span class="math-term">ℓ<sub>0</sub></span> Sparse Regularization Problem</a>
 <p class="paper-details">Ronglong Fang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>.
 <em>Journal of Scientific Computing</em>, 100(2):58, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://arxiv.org/pdf/2404.17689" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Inexact Fixed-Point Proximity Algorithm for the ℓ 0 Sparse Regularization Problem" href="https://link.springer.com/article/10.1007/s10915-024-02600-7" title="Official journal publication">[journal]</a></span></p>
 </li>
+
 <li data-topics="sparsity function-spaces" id="sparse-representer-theorems">
 <a class="paper-title" href="https://jmlr.org/papers/v25/23-0645.html">Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces</a>
 <p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>.
 <em>Journal of Machine Learning Research</em>, 25(93):1–45, 2024.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://arxiv.org/pdf/2305.12584" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Sparse Representer Theorems for Learning in Reproducing Kernel Banach Spaces" href="https://jmlr.org/papers/v25/23-0645.html" title="Official journal publication">[journal]</a></span></p>
 </li>
+
 </ol>
 </section>
+
 <section aria-labelledby="year-2023" class="paper-section">
 <h2 id="year-2023">2023</h2>
 <ol class="paper-list">
+
 <li data-topics="sparsity" id="parameter-choices">
 <a class="paper-title" href="https://doi.org/10.1088/1361-6420/acad22">Parameter Choices for Sparse Regularization with the <span class="math-term">ℓ<sub>1</sub></span> Norm</a>
 <p class="paper-details">Qianru Liu, Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>.
 <em>Inverse Problems</em>, 39(2):025004, 2023.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://arxiv.org/pdf/2205.07170" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Parameter Choices for Sparse Regularization with the ℓ 1 Norm" href="https://doi.org/10.1088/1361-6420/acad22" title="Official journal publication">[journal]</a></span></p>
 </li>
+
 </ol>
 </section>
+
 <section aria-labelledby="dissertation-heading" class="dissertation-section" id="dissertation">
 <h2 id="dissertation-heading">Ph.D. Dissertation</h2>
 <div class="dissertation-entry">
 <a class="paper-title" href="https://digitalcommons.odu.edu/mathstat_etds/128/">Deep Learning in Reproducing Kernel Banach Spaces</a>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>. Ph.D. dissertation, Old Dominion University, 2024.<span class="paper-resources"> <a href="https://digitalcommons.odu.edu/mathstat_etds/128/" title="Dissertation record and download at Old Dominion University">[dissertation]</a></span></p>
 </div>
-</section><footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
+</section>
+
+<footer id="footer">Design inspired by <a href="https://github.com/jem/jemdoc">jemdoc</a>.</footer>
 </main>
 </div>
+
 <script>
 (function () {
   'use strict';
@@ -258,20 +279,24 @@ In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Langua
   var panel = document.getElementById('topic-filter');
   var label = document.getElementById('topic-label');
   var dissertation = document.getElementById('dissertation');
+
   function applyTopic() {
     var requested = new URLSearchParams(window.location.search).get('topic') ||
                     document.body.getAttribute('data-preview-topic') || '';
     var topic = Object.prototype.hasOwnProperty.call(topics, requested) ? requested : '';
+
     entries.forEach(function (entry) {
       var tags = (entry.getAttribute('data-topics') || '').split(/\s+/);
       var matches = !topic || tags.indexOf(topic) !== -1;
       entry.hidden = !matches;
     });
+
     sections.forEach(function (section) {
       var hasVisibleEntry = Array.from(section.querySelectorAll('.paper-list > li'))
         .some(function (entry) { return !entry.hidden; });
       section.hidden = !hasVisibleEntry;
     });
+
     // Keep topic views restricted to related articles; show the thesis in the complete list.
     if (dissertation) dissertation.hidden = !!topic;
     panel.hidden = !topic;
@@ -280,17 +305,19 @@ In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Langua
                            : 'Publications - Mingsong Yan';
     document.body.setAttribute('data-active-topic', topic || 'all');
   }
+
   applyTopic();
   window.addEventListener('pageshow', applyTopic);
   window.addEventListener('popstate', applyTopic);
 }());
 </script>
+
 <!-- Default Statcounter code for mingsongyan.github.io
 http://mingsongyan.github.io -->
 <script type="text/javascript">
-var sc_project=13358700; 
-var sc_invisible=1; 
-var sc_security="35d9c017"; 
+var sc_project=13358700;
+var sc_invisible=1;
+var sc_security="35d9c017";
 </script>
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js" async></script>
@@ -299,5 +326,6 @@ href="https://statcounter.com/" target="_blank"><img class="statcounter"
 src="https://c.statcounter.com/13358700/0/35d9c017/1/" alt="Web Analytics"
 referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
+
 </body>
 </html>
