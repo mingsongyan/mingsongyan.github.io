@@ -157,7 +157,7 @@
 </aside>
 <noscript><p class="filter-fallback">JavaScript is off, so all publications are shown instead of a topic-filtered list.</p></noscript>
 
-<!-- Bibliographic source: the supplied 2026_Job_Application.pdf.
+<!-- Bibliographic source: the supplied cv(4).pdf, updated November 15, 2026.
      Paper titles link to the official journal/proceedings article when an article URL is available.
      Otherwise, titles link to the arXiv abstract page (https://arxiv.org/abs/ID).
      The dissertation title links to its ODU repository record.
@@ -181,6 +181,11 @@
 <h2 id="year-2026">2026</h2>
 <ol class="paper-list">
 
+<li data-topics="llm-pretraining" id="t-muon">
+<a class="paper-title" href="https://arxiv.org/abs/2610.24938">T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training</a>
+<p class="paper-details">Dongyang Li, <span class="self-author">Mingsong Yan</span>, Zheng Zhang, Sui Tang. <em>arXiv preprint</em>, arXiv:2610.24938, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: T-MUON: Tensorizing Muon via t-SVD for Large Language Model Pre-training" href="https://arxiv.org/pdf/2610.24938" title="Latest arXiv version (PDF)">[paper]</a></span></p>
+</li>
+
 <li data-topics="graph-transfer" id="continuous-depth-gnn">
 <a class="paper-title" href="https://epubs.siam.org/doi/10.1137/25M1800822">On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks</a>
 <p class="paper-details"><span class="self-author">Mingsong Yan</span>, Charles Kulick, Sui Tang. <em>SIAM Journal on Mathematics of Data Science</em>, 8(4):1120–1154, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks" href="https://arxiv.org/pdf/2510.03923" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: On the Convergence and Size Transferability of Continuous-Depth Graph Neural Networks" href="https://epubs.siam.org/doi/10.1137/25M1800822" title="Official journal publication">[journal]</a></span></p>
@@ -199,7 +204,7 @@
 <li data-topics="function-spaces" id="hypothesis-spaces">
 <a class="paper-title" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767">Hypothesis Spaces for Deep Learning</a>
 <p class="paper-details">Rui Wang, Yuesheng Xu, <span class="self-author">Mingsong Yan</span><sup class="authorship-mark" title="Alphabetical authorship"><svg aria-label="Alphabetical authorship" class="authorship-diamond" focusable="false" height="16" role="img" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="8,1.5 14.5,8 8,14.5 1.5,8" stroke="currentColor" stroke-linejoin="miter" stroke-width="1.6"></polygon></svg></sup>.
-<em>Neural Networks</em>, 193, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Hypothesis Spaces for Deep Learning" href="https://arxiv.org/pdf/2403.03353" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Hypothesis Spaces for Deep Learning" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767" title="Official journal publication">[journal]</a></span></p>
+<em>Neural Networks</em>, 193:107995, 2026.<span class="paper-resources"><a aria-label="Latest arXiv PDF: Hypothesis Spaces for Deep Learning" href="https://arxiv.org/pdf/2403.03353" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: Hypothesis Spaces for Deep Learning" href="https://www.sciencedirect.com/science/article/pii/S0893608025008767" title="Official journal publication">[journal]</a></span></p>
 </li>
 
 </ol>
@@ -209,9 +214,9 @@
 <h2 id="year-2025">2025</h2>
 <ol class="paper-list">
 
-<li data-topics="low-rank" id="cola">
+<li data-topics="llm-pretraining" id="cola">
 <a class="paper-title" href="https://aclanthology.org/2025.emnlp-main.230/">CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation</a>
-<p class="paper-details">Ziyue Liu, Ruijie Zhang, Zhengyang Wang, <span class="self-author">Mingsong Yan</span>, Zi Yang, Paul Hovland, Bogdan Nicolae, Franck Cappello, Sui Tang, Zheng Zhang.
+<p class="paper-details">Ziyue Liu, Ruijie Zhang, Zhengyang Wang, <span class="self-author">Mingsong Yan</span>, Zi Yang, Paul D. Hovland, Bogdan Nicolae, Franck Cappello, Sui Tang, Zheng Zhang.
 In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing (EMNLP)</em>, 2025.<span class="paper-resources"><a aria-label="Latest arXiv PDF: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" href="https://arxiv.org/pdf/2502.10940" title="Latest arXiv version (PDF)">[paper]</a> <a aria-label="Official publication: CoLA: Compute-efficient Pre-training of LLMs via Low-rank Activation" href="https://aclanthology.org/2025.emnlp-main.230/" title="Official conference publication">[proceedings]</a></span></p>
 </li>
 
@@ -273,7 +278,7 @@ In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Langua
   'use strict';
   // To add a paper, give its li a data-topics attribute containing one or more
   // of these keys, separated by spaces. A paper may belong to multiple topics.
-  var topics = {"sparsity": "Sparse optimization", "low-rank": "Low-rank structure in LLMs", "graph-transfer": "Size transferability", "transformers": "In-context learning", "function-spaces": "Function spaces"};
+  var topics = {"sparsity": "Sparse optimization", "llm-pretraining": "LLM pretraining", "graph-transfer": "Size transferability", "transformers": "In-context learning", "function-spaces": "Function spaces"};
   var entries = Array.from(document.querySelectorAll('.paper-list > li'));
   var sections = Array.from(document.querySelectorAll('.paper-section'));
   var panel = document.getElementById('topic-filter');
@@ -283,6 +288,8 @@ In <em>Proceedings of the 2025 Conference on Empirical Methods in Natural Langua
   function applyTopic() {
     var requested = new URLSearchParams(window.location.search).get('topic') ||
                     document.body.getAttribute('data-preview-topic') || '';
+    // Preserve links to the earlier low-rank category.
+    if (requested === 'low-rank') requested = 'llm-pretraining';
     var topic = Object.prototype.hasOwnProperty.call(topics, requested) ? requested : '';
 
     entries.forEach(function (entry) {
